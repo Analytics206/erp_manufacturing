@@ -5,17 +5,17 @@
 Valor ERP is built on a modern, cloud-native architecture with the following components:
 
 ```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│    Frontend     │     │    Backend      │     │     Storage     │
-│  (Next.js PWA)  │◄───►│  (Firebase)     │◄───►│  (Firestore)    │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-        ▲                       ▲                        ▲
-        │                       │                        │
-        ▼                       ▼                        ▼
-┌─────────────────┐   ┌─────────────────┐    ┌─────────────────┐
-│     Mobile      │   │   Cloud         │    │  File Storage   │
-│    (PWA)        │   │   Functions     │    │  (Firebase)     │
-└─────────────────┘   └─────────────────┘    └─────────────────┘
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│    Frontend     │     │    Backend      │     │  Document DB    │     │  Analytics DB   │
+│  (Next.js PWA)  │◄───►│  (Firebase)     │◄───►│  (Firestore)    │────►│  (PostgreSQL)   │
+└─────────────────┘     └─────────────────┘     └─────────────────┘     └─────────────────┘
+        ▲                       ▲                        ▲                       ▲
+        │                       │                        │                       │
+        ▼                       ▼                        ▼                       ▼
+┌─────────────────┐   ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│     Mobile      │   │   Cloud         │    │  File Storage   │    │   TimescaleDB   │
+│    (PWA)        │   │   Functions     │    │  (Firebase)     │    │   Extension     │
+└─────────────────┘   └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
 ## Core Technologies
@@ -27,13 +27,15 @@ Valor ERP is built on a modern, cloud-native architecture with the following com
 - **Progressive Web App**: Offline-first capabilities
 - **Responsive Design**: Mobile-first approach
 
-### Backend (Firebase)
+### Backend
 - **Authentication**: Firebase Auth with JWT
-- **Database**: Firestore (NoSQL)
+- **Document Database**: Firestore (NoSQL)
+- **Analytics Database**: PostgreSQL with TimescaleDB extension
 - **Serverless Functions**: Firebase Cloud Functions
 - **File Storage**: Firebase Storage
 - **Real-time Updates**: Firestore listeners
 - **Push Notifications**: Firebase Cloud Messaging
+- **Data Warehousing**: PostgreSQL for analytics and reporting
 
 ### Development Tools
 - **IDE**: VS Code with Cursor AI
@@ -117,6 +119,9 @@ npm install
 # Start development server
 npm run dev
 
+# Start Docker containers including PostgreSQL
+docker-compose up -d
+
 # Deploy to Firebase
 firebase deploy
 ```
@@ -125,18 +130,21 @@ firebase deploy
 
 ### Development
 - **Environment**: Local Docker containers
-- **Database**: Local Firestore emulator
+- **Document Database**: Local Firestore emulator
+- **Analytics Database**: PostgreSQL container with TimescaleDB
 - **Authentication**: Emulator suite
 
 ### Staging
 - **Frontend**: Vercel Preview Deployments
 - **Backend**: Firebase staging project
-- **Database**: Firestore test instance
+- **Document Database**: Firestore test instance
+- **Analytics Database**: PostgreSQL staging instance
 
 ### Production
 - **Frontend**: Vercel Production
 - **Backend**: Firebase Production
-- **Database**: Firestore with daily backups
+- **Document Database**: Firestore with daily backups
+- **Analytics Database**: PostgreSQL with TimescaleDB extension
 - **CDN**: Vercel Edge Network
 
 ## Performance Optimization
@@ -154,7 +162,7 @@ firebase deploy
 ## Future Considerations
 
 ### Scalability
-- **Database**: Potential migration to PostgreSQL
+- **Database Scaling**: PostgreSQL replication and sharding
 - **Caching**: Redis integration
 - **Search**: Algolia or Elasticsearch
 

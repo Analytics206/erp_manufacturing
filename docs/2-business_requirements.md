@@ -16,7 +16,7 @@ Valor ERP is a custom ERP SaaS platform tailored for metalworking companies, des
 
 | BRD ID | Feature Description | Phase | Linked PRD Requirement(s) |
 |--------|---------------------|-------|---------------------------|
-| BRD-001 | Containerized development environment | 1 | DCK-01 to DCK-03 |
+| BRD-001 | Containerized development environment with Docker and Docker Compose for consistent deployment | 1 | DCK-01 to DCK-03 |
 | BRD-002 | Authentication and role-based access control | 1 | AUTH-01 to AUTH-03 |
 | BRD-003 | Inventory management with CRUD operations | 2 | INV-01 to INV-04 |
 | BRD-004 | Estimate creation and management | 3 | EST-01 to EST-05 |
@@ -38,8 +38,8 @@ Valor ERP is a custom ERP SaaS platform tailored for metalworking companies, des
   - Firebase Storage for file storage
   - Cloud Messaging for notifications
 - **Database**: 
-  - Firestore (primary)
-  - PostgreSQL (optional for analytics, cost considerations apply)
+  - Firestore (primary for document storage)
+  - PostgreSQL (analytics and data warehousing with TimescaleDB extension)
 - **Hosting**: 
   - Vercel for frontend hosting
   - Firebase for backend services
@@ -95,15 +95,20 @@ Valor ERP is a custom ERP SaaS platform tailored for metalworking companies, des
 | Performance at scale | High | Low | Load testing, caching strategies |
 | Data migration challenges | Medium | Medium | Incremental migration, validation tools |
 | User adoption | Medium | Medium | Training, intuitive UI, phased rollout |
+| Postgres Cost | High | Medium | Start with Firestore, evaluate Postgres ROI |
+| AI Tool Learning Curve | Medium | Low | Leverage existing AI expertise, document patterns |
+| Async Communication Gaps | Medium | Medium | Clear documentation, regular check-ins |
+| Scope Creep | High | Medium | Strict phase gating, change control |
 
 ## 10. Appendices
 ### 10.1 Reference Materials
 - **Demo UI**: [Valor ERP Demo](https://valor.appsandsides.com/)
-- **Repository**: [GitHub organization link]
-- **ERP Roadmap**: [ERP_Roadmap_for_Upwork_060725_411p.pdf](attached)
+- **Repository**: [GitHub Repository](https://github.com/your-organization/valor-erp)
+- **ERP Roadmap**: [ERP Roadmap](/docs/5-roadmap.pdf)
 
 ### 10.2 Technical References
-- **Deployment Guide**: [Link to deployment documentation]
+- **Product Requirements (PRD)**: [Product Requirements Document](/docs/3-product_requirements.md)
+- **System Design**: [System Design Document](/docs/6-system_design.md)
 - **API Documentation**: [Link to API docs]
 - **Firebase Configuration**: [Link to Firebase setup]
 - **Vercel Deployment**: [Link to Vercel setup]
@@ -130,18 +135,18 @@ Valor ERP is a custom ERP SaaS platform tailored for metalworking companies, des
   - Review and understand all AI suggestions
   - Maintain code quality and consistency
 
-# 11. Executive Summary
+## 11. Executive Summary
 
 The purpose of the Valor ERP project is to develop a custom ERP SaaS platform tailored for a metalworking company. The system will manage customer estimates, job tracking, inventory control, time & attendance, invoicing, and reporting. It will streamline business operations, enable remote and asynchronous work, and prioritize beautiful, modern UI/UX with a developer-empowered, AI-augmented build process.
 
-# 12. Objectives
+## 12. Objectives
 - Enable efficient estimate-to-invoice workflows.
 - Support job tracking and inventory synchronization.
 - Simplify timekeeping and payroll preparation.
 - Offer clear, actionable reporting dashboards.
 - Provide a scalable, modular, and maintainable system.
 
-# 13. Functional Requirements
+## 13. Functional Requirements
 ### Phase 1: Foundation & Architecture
 - CI/CD pipeline with linting, tests.
 - Tailwind-based responsive UI shell (with dark mode).
@@ -180,40 +185,32 @@ The purpose of the Valor ERP project is to develop a custom ERP SaaS platform ta
 - Widgets for revenue, profitability, and utilization.
 - Ad-hoc filter builder UI.
 
-# 14. Technical Requirements
+## 14. Technical Requirements
 - Frontend: Next.js (or developer choice), Tailwind, shadcn/ui.
 - Backend: Firebase (Auth, Firestore, Functions). Postgres optional for analytics.
 - Hosting: Vercel (dev/staging/prod environments).
 - CI/CD: GitHub Actions.
 - Email: Amazon SES.
 
-# 15. QA & Acceptance Criteria
+## 15. QA & Acceptance Criteria
 - 80% automated test coverage on critical logic.
 - Functional UAT by managers.
 - Code review before merge.
 - Deployed to staging.
 - Documentation updated.
 
-# 16. Timeline & Milestones
-## Phase
-Duration (Weeks)
+## 16. Timeline & Milestones
+| Phase | Duration (Weeks) |
+|-------|----------------|
+| Phase 1: Architecture | 8-12 |
+| Phase 2: Inventory | 10-14 |
+| Phase 3: Estimating | 12-16 |
+| Phase 4: Jobs | 12-16 |
+| Phase 5: Time & Attendance | 8-12 |
+| Phase 6: Invoicing | 6-10 |
+| Phase 7: Reporting | 10-14 |
 
-### Phase 1: Architecture
-1–2
-### Phase 2: Inventory
-5–7
-### Phase 3: Estimating
-11–14
-### Phase 4: Jobs
-10–14
-### Phase 5: Time & Attendance
-6–8
-### Phase 6: Invoicing
-4–7
-### Phase 7: Reporting
-8–12
-
-# 17. Security & Permissions
+## 17. Security & Permissions
 - Firebase security rules based on role (front desk, manager, technician).
 - CAPTCHAs on public forms.
 - Audit trails (version history).
@@ -257,15 +254,13 @@ Duration (Weeks)
    - Continuous improvement of process
    - Adjustments based on velocity and feedback
 
-## 19. Risks & Mitigation
-| Risk | Impact | Probability | Mitigation Strategy |
-|------|--------|-------------|---------------------|
-| Postgres Cost | High | Medium | Start with Firestore, evaluate Postgres ROI |
-| AI Tool Learning Curve | Medium | Low | Leverage existing AI expertise, document patterns |
-| Async Communication Gaps | Medium | Medium | Clear documentation, regular check-ins |
-| Scope Creep | High | Medium | Strict phase gating, change control |
-| Performance at Scale | High | Low | Early load testing, caching strategy |
-| Client Adoption | Medium | Medium | Early demos, training materials |
+## 19. Implementation Considerations
+| Factor | Description | Strategy |
+|--------|-------------|----------|
+| Docker Containerization | Docker and Docker Compose for consistent environments | Create development, testing, and production container configurations |
+| Development Workflow | Asynchronous, AI-assisted development | Document patterns and best practices for AI tooling |
+| Performance Optimization | Ensuring system remains responsive at scale | Implement caching strategy and regular performance tests |
+| Client Training | Ensuring smooth adoption by end users | Develop comprehensive documentation and training materials |
 
 ### Key Assumptions
 - Developer is proficient with AI-assisted development tools
@@ -275,6 +270,7 @@ Duration (Weeks)
 - 18-month timeline allows for thorough testing and refinement
 
 # 20. Appendix
-- Demo UI
-- Repo access: Will be granted
-- Client industry: Metal fabrication
+- **Demo UI**: [Valor ERP Demo](https://valor.appsandsides.com/)
+- **Repository**: [GitHub Repository](https://github.com/your-organization/valor-erp) 
+- **Client Industry**: Metal fabrication
+- **Technical Documentation**: See [System Design](/docs/6-system_design.md) and [Schema Documentation](/docs/6-schema)

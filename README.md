@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </div>
 
 ## 🌟 Overview
@@ -37,13 +38,15 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 - **Progressive Web App**: Offline-first capabilities
 - **Type Safety**: TypeScript
 
-### Backend (Firebase)
-- **Authentication**: Firebase Auth with JWT
-- **Database**: Firestore (NoSQL)
-- **Serverless Functions**: Firebase Cloud Functions
-- **File Storage**: Firebase Storage
-- **Real-time Updates**: Firestore listeners
-- **Push Notifications**: Firebase Cloud Messaging
+### Backend
+- 🔐 **Authentication**: Firebase Auth with JWT
+- 🔥 **Primary Database**: Firestore (NoSQL)
+- 🐘 **Analytics Database**: PostgreSQL 
+- ⚡ **Serverless Functions**: Firebase Cloud Functions
+- 📁 **File Storage**: Firebase Storage
+- 🔄 **Real-time Updates**: Firestore listeners
+- 📲 **Push Notifications**: Firebase Cloud Messaging
+- 🐘 **Data Warehouse**: PostgreSQL with TimescaleDB extension
 
 ### DevOps & Tools
 - **Version Control**: GitHub
@@ -56,25 +59,36 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 ## 🏗️ System Architecture
 
 ```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│    Frontend     │     │    Backend      │     │     Storage     │
-│  (Next.js PWA)  │◄───►│  (Firebase)     │◄───►│  (Firestore)    │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-        ▲                       ▲                        ▲
-        │                       │                        │
-        ▼                       ▼                        ▼
-┌─────────────────┐   ┌─────────────────┐    ┌─────────────────┐
-│     Mobile      │   │   Cloud         │    │  File Storage   │
-│    (PWA)        │   │   Functions     │    │  (Firebase)     │
-└─────────────────┘   └─────────────────┘    └─────────────────┘
+┌─────────────────────────────────┐     ┌───────────────────────────────────┐
+│          Frontend              │     │            Backend                │
+│  ┌─────────────────────────┐   │     │   ┌─────────────────────────┐    │
+│  │  Next.js PWA (React 18) │   │     │   │     Firebase Services     │    │
+│  └────────────���────────────┘   │     │   │  ┌────────┐ ┌─────────┐  │    │
+│  ┌─────────────────────────┐   │     │   │  │  Auth  │ │ Storage │  │    │
+│  │  Tailwind + shadcn/ui   │   │     │   │  └────────┘ └─────────┘  │    │
+│  └─────────────────────────┘   │◄───►│   │  ┌────────┐ ┌─────────┐  │    │
+│  ┌─────────────────────────┐   │     │   │  │Firestore│ │ Cloud   │  │    │
+│  │  TypeScript + SWR       │   │     │   │  │         │ │Functions│  │    │
+│  └─────────────────────────┘   │     │   │  └────────┘ └─────────┘  │    │
+└─────────────────────────────────┘     └───────────────────────────────────┘
+        ▲                                                    ▲
+        │                                                    │
+        ▼                                                    ▼
+┌─────────────────────────┐               ┌───────────────────────────────────┐
+│     Client Devices      │               │      Development & DevOps         │
+│  ┌─────────┐ ┌───────┐  │               │  ┌──────────┐  ┌─────────────┐   │
+│  │ Desktop │ │Mobile │  │               │  │  Docker  │  │ GitHub      │   │
+│  │ Browser │ │ PWA   │  │               │  │          │  │ Actions     │   │
+│  └─────────┘ └───────┘  │               │  └──────────┘  └─────────────┘   │
+└─────────────────────────┘               └───────────────────────────────────┘
 ```
 
 ## 📅 Project Timeline
 
 | Phase | Description | Duration | Status |
 |-------|-------------|----------|--------|
-| 1 | Foundation & Architecture | 8-12 weeks | 🔄 In Progress |
-| 2 | Inventory Management | 10-14 weeks | ⏳ Planned |
+| 1 | Foundation & Architecture | 8-12 weeks | ✅ Completed |
+| 2 | Inventory Management | 10-14 weeks | 🔄 In Progress |
 | 3 | Estimating System | 12-16 weeks | ⏳ Planned |
 | 4 | Job Management | 12-16 weeks | ⏳ Planned |
 | 5 | Time & Attendance | 8-12 weeks | ⏳ Planned |
@@ -95,7 +109,7 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 
 1. **Clone the repository**
    ```bash
-   git clone [repo-url]
+   git clone https://github.com/your-organization/valor-erp.git
    cd erp-manufacturing
    ```
 
@@ -143,11 +157,12 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 
 ## 📚 Documentation
 
-- [Business Requirements (BRD)](1-bdr.md)
-- [Product Requirements (PRD)](2-prd.md)
-- [Requirements Tracker](3-requirements_tracker.md)
-- [System Design](4-system_design.md)
-- [Tech Stack](5-tech_stack.md)
+- [Business Requirements (BRD)](docs/2-business_requirements.md)
+- [Product Requirements (PRD)](docs/3-product_requirements.md)
+- [Requirements Tracker](docs/4-requirements_tracker.md)
+- [System Design](docs/6-system_design.md)
+- [Schema](docs/6-schema)
+- [Tech Stack](docs/5-tech_stack.md)
 
 ## 🤝 Contributing
 
@@ -163,10 +178,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For inquiries, please contact [Your Name] at [your.email@example.com](mailto:your.email@example.com)
+For inquiries, please contact the Valor ERP team at [contact@valorerp.com](mailto:contact@valorerp.com)
 
 ---
 
 <div align="center">
-  Made with ❤️ by [Your Team Name]
+  Made with ❤️ by Valor ERP Development Team
 </div>

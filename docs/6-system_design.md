@@ -49,7 +49,8 @@ This document serves as a technical reference for developers, architects, and te
 | Styling | Tailwind CSS, shadcn/ui | Utility-first CSS with accessible components |
 | State Management | React Context, SWR | Client-side state and data fetching |
 | Authentication | Firebase Authentication | Secure auth with JWT and RBAC |
-| Database | Firestore (primary) | Real-time document database |
+| Document Database | Firestore | Real-time NoSQL document database |
+| Analytics Database | PostgreSQL | Analytics and data warehousing with TimescaleDB |
 | File Storage | Firebase Storage | Secure file uploads and management |
 | Backend | Firebase Cloud Functions | Serverless backend services |
 | Hosting | Vercel (frontend) | Edge-optimized frontend hosting |
@@ -213,9 +214,11 @@ This document serves as a technical reference for developers, architects, and te
 - **Web Vitals monitoring** with RUM
 - **Bundle analysis** for size optimization
 
-### Backend Optimization
+### Database Optimization
 - **Serverless architecture** with auto-scaling
 - **Firestore indexing** strategy
+- **PostgreSQL partitioning** for time-series data
+- **TimescaleDB** for efficient time-series analytics
 - **Query optimization** with composite indexes
 - **Caching layer** with Redis (if needed)
 - **Cold start mitigation** for Cloud Functions
