@@ -1,7 +1,7 @@
 # Project Charter
 
 ## Project Name
-[Your Project Name]
+Valor ERP
 
 ## Project Summary
 A high-level overview of the project, its goals, and context.

@@ -1,4 +1,4 @@
-# NEW PROJECT NAME
+# Valor ERP
 ---
 ## Version 0.2.0 (May 3, 2025)
 

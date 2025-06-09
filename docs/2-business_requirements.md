@@ -1,6 +1,6 @@
 # 📘 Business Requirements Document (BRD)
 
-## Project Name: NEW PROJECT NAME
+## Project Name: Valor ERP
 
 ## 1. Overview
 A modular, offline-capable  **All services will be containerized using Docker for local deployment and consistency.**

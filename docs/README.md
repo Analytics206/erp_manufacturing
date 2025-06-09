@@ -1,12 +1,12 @@
-# ArXiv Pipeline Documentation
+# Valor ERP Documentation
 
-This directory contains comprehensive documentation for the ArXiv Pipeline project. Use this index to navigate through the various documentation files.
+This directory contains comprehensive documentation for the Valor ERP project. Use this index to navigate through the various documentation files.
 
 ## Core Documentation
 
 | Document | Description |
 |----------|-------------|
-| [system_design.md](./system_design.md) | Details the system architecture, design patterns, configuration options, and component relationships that comprise the ArXiv Pipeline. Includes sections on data organization, database integration, system monitoring, and pipeline components. |
+| [system_design.md](./system_design.md) | Details the system architecture, design patterns, configuration options, and component relationships that comprise the Valor ERP. Includes sections on data organization, database integration, system monitoring, and pipeline components. |
 | [tech_stack.md](./tech_stack.md) | Comprehensive overview of all technologies used in the project including infrastructure, monitoring, data storage, vector embeddings, APIs, and database schemas. Includes diagrams for system architecture and deployment options. |
 | [release_notes.md](./release_notes.md) | Chronological record of all releases, with version details, features, enhancements, and dependencies for each update. Current version is 0.3.0 (May 4, 2025). |
 | [business_requirements.md](./business_requirements.md) | Business requirements document (BRD) outlining the business goals, stakeholder needs, and success criteria for the project. |
