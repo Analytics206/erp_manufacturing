@@ -51,7 +51,6 @@ The developer has a wide berth in this job to use the tech stack that suits them
 - Next.js
 - Tailwind CSS
 - JS and/or TS
-
 - Firebase
 - Firestore
 - Cloud Functions
