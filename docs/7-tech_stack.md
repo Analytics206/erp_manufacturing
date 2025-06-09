@@ -1,275 +1,179 @@
-# 🛠️ Technical Stack Documentation
+# 🛠️ Valor ERP - Technical Stack
 
 ## System Architecture Overview
 
-The ArXiv Research Pipeline is built on a microservices architecture using Docker containers with the following components:
+Valor ERP is built on a modern, cloud-native architecture with the following components:
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Ingestion     │────▶│  Data Storage   │────▶│   Processing    │
-│   Service       │     │    Layer        │     │    Layer        │
+│    Frontend     │     │    Backend      │     │     Storage     │
+│  (Next.js PWA)  │◄───►│  (Firebase)     │◄───►│  (Firestore)    │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
-                                                         │
-                                                         ▼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│      User       │◀────│   Knowledge     │◀────│   Vector        │
-│   Interface     │     │     Graph       │     │   Embeddings    │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
+        ▲                       ▲                        ▲
+        │                       │                        │
+        ▼                       ▼                        ▼
+┌─────────────────┐   ┌─────────────────┐    ┌─────────────────┐
+│     Mobile      │   │   Cloud         │    │  File Storage   │
+│    (PWA)        │   │   Functions     │    │  (Firebase)     │
+└─────────────────┘   └─────────────────┘    └─────────────────┘
 ```
 
 ## Core Technologies
 
-### Infrastructure & Containerization
-- **Docker**: All services containerized for isolation and portability
-- **Docker Compose**: Multi-container orchestration for local development
-- **Python 3.11**: Core programming language (slim container variant)
-- **UV Package Manager**: Fast Python dependency management
-- **Git**: Version control system
+### Frontend
+- **Framework**: Next.js 14 with React 18
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **State Management**: React Context + SWR for data fetching
+- **Progressive Web App**: Offline-first capabilities
+- **Responsive Design**: Mobile-first approach
 
-### Messaging System
-- **Apache Kafka**: Distributed event streaming platform for high-throughput, fault-tolerant messaging
-- **Confluent Platform**: Enterprise-ready distribution of Kafka
-- **Zookeeper**: Coordinates the Kafka cluster
-- **Confluent Kafka Python Client**: Python client library for producer/consumer interactions
-- **Kafka UI**: Web interface for Kafka cluster management and monitoring (provectuslabs/kafka-ui)
+### Backend (Firebase)
+- **Authentication**: Firebase Auth with JWT
+- **Database**: Firestore (NoSQL)
+- **Serverless Functions**: Firebase Cloud Functions
+- **File Storage**: Firebase Storage
+- **Real-time Updates**: Firestore listeners
+- **Push Notifications**: Firebase Cloud Messaging
 
-### Monitoring & Observability
-- **Prometheus**: Time series database for metrics collection and storage
-  - Metrics: container performance, system resources, application metrics
-  - Targets: containers, host system, MongoDB, application services
-- **Grafana**: Visualization platform for metrics dashboards
-  - Preconfigured dashboards for Docker containers and system metrics
-  - Customizable alerts and notifications
-- **cAdvisor**: Container metrics collector
-- **Node Exporter**: Host system metrics collector
-- **MongoDB Exporter**: MongoDB-specific metrics collector
-- **Prometheus Client**: Python library for custom application metrics
+### Development Tools
+- **IDE**: VS Code with Cursor AI
+- **Version Control**: GitHub
+- **AI Assistance**:
+  - Claude Sonnet 4 for UI/UX design
+  - GitHub Copilot for code completion
+  - Cursor for AI-assisted development
+  - Zed for enhanced editing
 
-### Ingestion Layer
-- **Requests**: HTTP client library
-- **ElementTree**: XML parsing for ArXiv response data
-- **Rate limiting**: Configurable throttling to respect API constraints
+### DevOps & CI/CD
+- **Version Control**: GitHub
+- **CI/CD**: GitHub Actions
+- **Hosting**: Vercel (Frontend), Firebase (Backend)
+- **Containerization**: Docker + Docker Compose
+- **Infrastructure as Code**: Terraform (planned)
 
-### Data Storage Layer
-- **MongoDB**: NoSQL document database for paper metadata storage
-  - Collections: 
-  - Indexes for efficient querying
-  - Deployment options:
-    - Docker container: Standard deployment within main pipeline
-    - External Docker: Standalone deployment on separate machine with persistent storage
-- **Docker volumes**: Persistent storage for database contents
+### Testing
+- **Unit Testing**: Jest + React Testing Library
+- **E2E Testing**: Cypress
+- **API Testing**: Postman, Insomnia
+- **Visual Regression**: Storybook + Chromatic
 
-### Graph Representation
-- **Neo4j**: Graph database for representing paper-author-category relationships
-  - Nodes: 
-  - Relationships: 
-  - Cypher query language
-  - Deployment options:
-    - Docker container: Standard deployment within main pipeline
-    - External Docker: Standalone deployment on separate machine with persistent storage
-- **Neo4j Python Driver**: Interface for graph operations
+## AI-Assisted Development
 
-### Vector Embeddings
-- **Hugging Face Transformers**: Machine learning models for text embeddings
-- **PyTorch with CUDA**: GPU-accelerated embeddings generation
-- **Ollama**: Local LLM server for text analysis and embedding generation
-  - Deployment options:
-    - Local instance: Run directly on the host machine
-    - Docker container: Standard deployment within main pipeline
-    - External Docker: Standalone deployment on separate machine with model management
-- **Qdrant**: Vector database for similarity search
-  - Collections: paper_embeddings
-  - Storage of metadata with vectors
-  - Deployment options:
-    - Docker container: Standard deployment
-    - External Docker: Standalone deployment on separate machine
-    - WSL2 GPU-accelerated: Enhanced performance with CUDA support
-    - Standalone with GPU: Direct installation with CUDA support
-    - Remote WSL2 with GPU: Dedicated vector server on separate machine
-  - Vector optimization: Native GPU acceleration through Rust with CUDA
-  - Benchmarking tools for performance testing
-- **Embedding models**: Sentence transformers for semantic representation
-- **MongoDB Tracking**: Prevents duplicate PDF processing
+### Code Generation
+- **UI Components**: AI-generated React components with shadcn/ui
+- **Boilerplate**: Automated project scaffolding
+- **Documentation**: Auto-generated API docs
 
-### PDF Processing
-- **PDF Download**: Direct file retrieval from ArXiv
-- **Storage**: Local filesystem storage (E:\AI Research)
+### Code Quality
+- **AI Code Reviews**: Automated PR reviews
+- **Performance Optimization**: AI-suggested improvements
+- **Security Scanning**: Automated vulnerability detection
 
-### Configuration & Utilities
-- **YAML**: Configuration file format
-- **Environment Variables**: Runtime configuration
-- **Logging**: Standard Python logging
+### Developer Experience
+- **AI Pair Programming**: Real-time code suggestions
+- **Context-Aware Completions**: Smart code completions
+- **Automated Refactoring**: AI-assisted code improvements
 
-## API Integrations
-- **ArXiv.org API**: `http://export.arxiv.org/api/query`
-  - Categories: cs.AI, cs.LG, cs.CV, etc.
-  - Sort options: submittedDate
-  - Result limits: Configurable
+## Monitoring & Analytics
 
-## Development Tools
-- **Python Virtual Environment**: Isolated dependency management
-- **Docker Compose**: Local environment orchestration
+### Performance Monitoring
+- **Frontend**: Vercel Analytics
+- **Backend**: Firebase Performance Monitoring
+- **Real User Monitoring**: Web Vitals tracking
 
-## Monitoring Architecture
+### Error Tracking
+- **Client-side**: Error boundaries + logging
+- **Server-side**: Firebase Crashlytics
+- **Logging**: Centralized logging with Firebase
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  Monitoring Environment                  │
-│                                                          │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │Prometheus│────▶│ Grafana  │     │  cAdvisor  │       │
-│   │          │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│        │                               │                 │
-│        │          ┌──────────┐         │                 │
-│        └──────────│Node      │─────────┘                 │
-│                   │Exporter  │                           │
-│                   └──────────┘                           │
-│                        │                                 │
-└────────────────────────│─────────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────┐
-│                   Docker Environment                     │
-│  (Application containers, databases, and services)       │
-└─────────────────────────────────────────────────────────┘
+## Security
+
+### Authentication & Authorization
+- **Multi-factor Authentication**: For admin operations
+- **Role-Based Access Control**: Fine-grained permissions
+- **Session Management**: Secure, configurable timeouts
+
+### Data Protection
+- **Encryption**: TLS 1.3 in transit, AES-256 at rest
+- **Security Rules**: Firestore security rules
+- **Compliance**: GDPR/CCPA ready
+
+## Development Environment
+
+### Local Setup
+1. Node.js 18+
+2. Firebase CLI
+3. Docker Desktop
+4. VS Code with recommended extensions
+
+### Quick Start
+```bash
+# Clone the repository
+git clone [repo-url]
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Deploy to Firebase
+firebase deploy
 ```
 
 ## Deployment Architecture
 
-The system supports four deployment architectures:
+### Development
+- **Environment**: Local Docker containers
+- **Database**: Local Firestore emulator
+- **Authentication**: Emulator suite
 
-### 1. Full Docker Deployment with Monitoring
+### Staging
+- **Frontend**: Vercel Preview Deployments
+- **Backend**: Firebase staging project
+- **Database**: Firestore test instance
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  Monitoring Environment                  │
-│                                                          │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │Prometheus│────▶│ Grafana  │     │  cAdvisor  │       │
-│   │          │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│        │                │              │                 │
-└────────│────────────────│──────────────│─────────────────┘
-         │                │              │
-         ▼                ▼              ▼
-┌─────────────────────────────────────────────────────────┐
-│                     Docker Environment                   │
-└─────────────────────────────────────────────────────────┘
-```
+### Production
+- **Frontend**: Vercel Production
+- **Backend**: Firebase Production
+- **Database**: Firestore with daily backups
+- **CDN**: Vercel Edge Network
 
-### 2. Standard Docker Deployment
-```
-┌─────────────────────────────────────────────────────────┐
-│                     Docker Environment                   │
-│                                                          │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │  app    │────▶│ mongodb  │────▶│ sync-neo4j │       │
-│   │         │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│        │                │                 │              │
-│        ▼                ▼                 ▼              │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │ qdrant  │◀────│  neo4j   │◀────│web-interface│       │
-│   │         │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
-```
+## Performance Optimization
 
-### 3. Hybrid Deployment with GPU Acceleration
-```
-┌─────────────────────────────────────────────────────────┐
-│                     Docker Environment                   │
-│                                                          │
-│   ┌─────────┐     ┌──────────┐     ┌────────────┐       │
-│   │  app    │────▶│ mongodb  │────▶│ sync-neo4j │       │
-│   │         │     │          │     │            │       │
-│   └─────────┘     └──────────┘     └────────────┘       │
-│        │                │                 │              │
-│        ▼                ▼                 ▼              │
-│                   ┌──────────┐     ┌────────────┐       │
-│                   │  neo4j   │◀────│web-interface│       │
-│                   │          │     │            │       │
-│                   └──────────┘     └────────────┘       │
-└─────────────────────│──────────────────────────────────┘
-                       │
-                       ▼
-┌──────────────────────────────────────────────────────┐
-│                 Host Environment                      │
-│                                                       │
-│ ┌─────────┐                                           │
-│ │ Qdrant  │ GPU-accelerated vector storage            │
-│ │         │ and similarity search                     │
-│ └─────────┘                                           │
-│      ▲                                                │
-│      │                                                │
-│ ┌────┴────┐                                           │
-│ │PyTorch   │ GPU-accelerated                          │
-│ │Embeddings│ vector generation                        │
-│ └─────────┘                                           │
-└──────────────────────────────────────────────────────┘
-```
+### Frontend
+- **Code Splitting**: Dynamic imports
+- **Image Optimization**: Next.js Image component
+- **Bundle Analysis**: webpack-bundle-analyzer
 
-### 4. Distributed Services Deployment
-```
-┌────────────────────────────────────────────┐     ┌────────────────────────────────────────────┐
-│          Machine 1 (Main Pipeline)         │     │          Machine 2 (MongoDB)               │
-│                                            │     │                                            │
-│ ┌─────────┐     ┌──────────┐     ┌──────┐ │     │ ┌──────────┐                               │
-│ │  app    │────▶│sync-neo4j│────▶│web-ui│ │     │ │ mongodb  │◀─────────────────────────────┤
-│ │         │     │          │     │      │ │     │ │          │                               │
-│ └─────────┘     └──────────┘     └──────┘ │     │ └──────────┘                               │
-└────────────────────────────────────────────┘     └────────────────────────────────────────────┘
-                       ▲
-                       │
-                       ▼
-┌────────────────────────────────────────────┐     ┌────────────────────────────────────────────┐
-│          Machine 3 (Neo4j)                 │     │          Machine 4 (Qdrant GPU)            │
-│                                            │     │                                            │
-│ ┌──────────┐                               │     │ ┌─────────┐                                │
-│ │  neo4j   │◀─────────────────────────────┤     │ │ qdrant  │◀─────────────────────────────┤
-│ │          │                               │     │ │ (GPU)   │                                │
-│ └──────────┘                               │     │ └─────────┘                                │
-└────────────────────────────────────────────┘     └────────────────────────────────────────────┘
-```
+### Backend
+- **Function Optimization**: Cold start mitigation
+- **Database Indexing**: Optimized queries
+- **Caching**: Client and server-side
 
-## Database Schema
+## Future Considerations
 
-### MongoDB Collections
-- **papers**: Research paper metadata
-  - id: 
-- **vector_processed_pdfs**: PDF processing tracking for Qdrant vector storage
-  - file_id: 
+### Scalability
+- **Database**: Potential migration to PostgreSQL
+- **Caching**: Redis integration
+- **Search**: Algolia or Elasticsearch
 
-### Neo4j Graph Model
-- **Nodes**:
-  - :Paper (id, title, summary, published, pdf_url)
-- **Relationships**:
-  - (:Author)-[:AUTHORED]->(:Paper)
-  - (:Paper)-[:BELONGS_TO]->(:Category)
+### AI/ML
+- **Predictive Analytics**: For inventory and demand
+- **Chatbot**: AI-powered support
+- **Automation**: AI-driven workflows
 
-### Qdrant Collections
-- **paper_embeddings** (arxiv_papers):
-  - Vector dimension: Model-dependent (768 default)
-  - Metadata: paper_id, title
-  - Distance metric: Cosine similarity
+## Support & Maintenance
 
-- **papers_summary**:
-  - Vector dimension: Model-dependent (768 default)
-  - Metadata: paper_id, title, category, published date, summary_length
-  - Distance metric: Cosine similarity
-  - Source: Paper summary/abstract from MongoDB
-  - Tracking: summary_processed_papers collection in MongoDB
+### Documentation
+- **API**: Swagger/OpenAPI
+- **User Guides**: Markdown-based
+- **Developer Guide**: Comprehensive setup instructions
 
-## Security Considerations
-- Local-first architecture minimizes external dependencies
-- Docker isolation for service components
-- No exposed credentials in code
-- Grafana access protected by authentication
+### Monitoring
+- **Uptime**: Status page
+- **Performance**: Real-time dashboards
+- **Error Tracking**: Automated alerts
 
-## Scaling Considerations
-- Container-based architecture supports horizontal scaling
-- Database services can be scaled independently
-- Modular components allow selective enhancement
-- Monitoring stack provides visibility into resource usage for capacity planning
+---
+*Last Updated: June 9, 2025*
