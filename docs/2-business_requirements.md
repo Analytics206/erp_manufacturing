@@ -1,4 +1,5 @@
 # 📘 Business Requirements Document (BRD)
+| [README.md](README.md) | Return to project details README.md |
 
 ## Project Name: Valor ERP
 

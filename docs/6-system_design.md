@@ -1,4 +1,5 @@
 # Valor ERP - System Design Document
+| [README.md](README.md) | Return to project details README.md |
 
 ## Overview
 

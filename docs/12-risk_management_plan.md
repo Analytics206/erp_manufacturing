@@ -1,4 +1,5 @@
 # Risk Management Plan
+| [README.md](README.md) | Return to project details README.md |
 
 ## Risks and Mitigations
 

@@ -1,6 +1,8 @@
-# NEW PROJECT NAME Development Notes
+# Valor ERP Development Notes
 
-## This document contains developer notes and reminders for ongoing work on the ArXiv pipeline project.
+| [README.md](README.md) | Return to project details README.md |
+
+## This document contains developer notes and reminders for ongoing work on the Valor ERP Manufacturing project.
 
 ## To-Do Items
 

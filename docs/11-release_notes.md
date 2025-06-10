@@ -1,4 +1,6 @@
 # Valor ERP
+| [README.md](README.md) | Return to project details README.md |
+
 ---
 ## Version 0.2.0 (May 3, 2025)
 

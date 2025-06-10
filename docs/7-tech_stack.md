@@ -1,5 +1,6 @@
 # 🛠️ Valor ERP - Technical Stack
-
+| [README.md](README.md) | Return to project details README.md |
+  
 ## System Architecture Overview
 
 Valor ERP is built on a modern, cloud-native architecture with the following components:

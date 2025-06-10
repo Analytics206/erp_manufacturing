@@ -1,4 +1,5 @@
 # 📗 Product Requirements Document (PRD)
+| [README.md](README.md) | Return to project details README.md |
 
 ## 1.0 Introduction
 ### 1.1 Purpose

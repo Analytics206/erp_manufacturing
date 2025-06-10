@@ -1,4 +1,5 @@
 # Project Charter
+| [README.md](README.md) | Return to project details README.md |
 
 ## Project Name
 Valor ERP - Modern Manufacturing Management System
