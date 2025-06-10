@@ -46,7 +46,7 @@ This document serves as a technical reference for developers, architects, and te
 ### Core Technologies
 | Component | Technology | Description |
 |-----------|------------|-------------|
-| Frontend | Next.js 14, React 18 | Modern, responsive web interface with SSR/SSG |
+| Frontend | Next.js 15.3, React 19.1 | Modern, responsive web interface with SSR/SSG |
 | Styling | Tailwind CSS, shadcn/ui | Utility-first CSS with accessible components |
 | State Management | React Context, SWR | Client-side state and data fetching |
 | Authentication | Firebase Authentication | Secure auth with JWT and RBAC |

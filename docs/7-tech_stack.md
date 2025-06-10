@@ -22,7 +22,7 @@ Valor ERP is built on a modern, cloud-native architecture with the following com
 ## Core Technologies
 
 ### Frontend
-- **Framework**: Next.js 14 with React 18
+- **Framework**: Next.js 15.3 with React 19.1
 - **Styling**: Tailwind CSS with shadcn/ui components
 - **State Management**: React Context + SWR for data fetching
 - **Progressive Web App**: Offline-first capabilities

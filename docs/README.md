@@ -4,20 +4,20 @@ This directory contains comprehensive documentation for the Valor ERP Manufactur
 
 ## Core Documentation
 
-| Document | Description |
-|----------|-------------|
+| Document Name     | Description   |
+|-----------------|---------------|
 | [1-project_charter.md](./1-project_charter.md) | Key project objectives, scope, stakeholders, and success criteria for the Valor ERP Manufacturing system. |
-| [2-business_requirements.md](./2-business_requirements.md) | Business requirements document (BRD) outlining the business goals, stakeholder needs, and success criteria for the manufacturing ERP. |
-| [3-product_requirements.md](./3-product_requirements.md) | Product requirements document (PRD) detailing specific product features, acceptance criteria, and prioritization for the manufacturing system. |
+| [2-business_requirements.md](./2-business_requirements.md) | Business requirements document (BRD) outlining the business goals, stakeholder needs, success criteria. |
+| [3-product_requirements.md](./3-product_requirements.md) | Product requirements document (PRD) detailing specific product features, acceptance criteria, and prioritization. |
 | [4-requirements_tracker.md](./4-requirements_tracker.md) | Tracking document for requirement implementation status and progress across the ERP manufacturing modules. |
 | [6-system_design.md](./6-system_design.md) | Details the system architecture, design patterns, configuration options, and component relationships that comprise the Valor ERP Manufacturing system. |
 | [7-tech_stack.md](./7-tech_stack.md) | Comprehensive overview of all technologies used in the project including the cloud-native architecture, Firebase backend, and Next.js frontend. |
-| [8-schema.md](./8-schema.md) | Database schema documentation for the manufacturing-specific entities including WorkCenters, Machines, Operations, ProductionOrders, QualityInspections, and more. |
+| [8-schema.md](./8-schema.md) | Database schema documentation for the manufacturing-specific entities including WorkCenters, Machines, Operations, ProductionOrders, Quality Inspections. |
 
 ## Project Management & Planning
 
-| Document | Description |
-|----------|-------------|
+| Document Name     | Description   |
+|-----------------|---------------|
 | [0-dev_notes.md](./0-dev_notes.md) | Developer notes and informal documentation about ongoing development work. |
 | [5-scope_statement.md](./5-scope_statement.md) | Detailed scope definition for the ERP Manufacturing project, outlining boundaries and deliverables. |
 | [9-project_plan.md](./9-project_plan.md) | Project timeline, milestones, resource allocation, and delivery schedule for the manufacturing ERP system. |
@@ -26,8 +26,8 @@ This directory contains comprehensive documentation for the Valor ERP Manufactur
 
 ## Release & Support Documentation
 
-| Document | Description |
-|----------|-------------|
+| Document Name     | Description   |
+|-----------------|---------------|
 | [11-release_notes.md](./11-release_notes.md) | Chronological record of all releases, with version details, features, enhancements, and dependencies for each update. |
 | [13-scratch.md](./13-scratch.md) | Working document for temporary notes and development ideas. |
 | [EmojiMe.md](./EmojiMe.md) | Emoji-based communication guidelines for the project documentation and team collaboration. |
@@ -35,8 +35,8 @@ This directory contains comprehensive documentation for the Valor ERP Manufactur
 
 ## Additional Resources
 
-| Directory | Description |
-|-----------|-------------|
+| Directory Name     | Description   |
+|--------------------|---------------|
 | [feedback](./feedback) | User feedback collection and analysis for continuous product improvement. |
 | [product_eval](./product_eval) | Product evaluation metrics, testing results, and quality assessment documentation. |
 | [setup](./setup) | Setup instructions, configuration guides, and deployment procedures for the ERP system. |

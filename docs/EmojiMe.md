@@ -112,6 +112,9 @@ Use this emoji guide to annotate project plans, system designs, and code documen
 | 🎉     | Celebration / milestone reached |
 | 🕹️     | Control panel / settings interface |
 | 🧑‍💻     | Developer / coding in progress |
+| 🗺️     | Map / navigation |
+| 📖     | Reference / docs |
+| 📜     | Invoice / receipt |
 
 # Emoji Faces Collection
 

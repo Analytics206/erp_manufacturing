@@ -1,13 +1,18 @@
 # Valor ERP - Modern Manufacturing Management System
-
+## Tech Stack
 <div align="center">
-  <img src="https://img.shields.io/badge/Next.js-14.2.3-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js 14.2.3">
-  <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react" alt="React 18.2.0">
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+  <img src="https://img.shields.io/badge/Next.js-15.3.0-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js 15.3.0">
+  <img src="https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react" alt="React 19.1.0">
+    <img src="https://img.shields.io/badge/Node.js-24.2.0-61DAFB?style=for-the-badge&logo=react" alt="Node.js 24.2.0">
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+</div>
+# Services
+<div align="center">
+    <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
 </div>
 
 ## 🌟 Overview
@@ -32,7 +37,7 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 ## 🛠️ Technology Stack
 
 ### Frontend
-- **Framework**: Next.js 14 with React 18
+- **Framework**: Next.js 15.3 with React 19.1
 - **Styling**: Tailwind CSS with shadcn/ui components
 - **State Management**: React Context + SWR
 - **Progressive Web App**: Offline-first capabilities
@@ -41,6 +46,7 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 ### Backend
 - 🔐 **Authentication**: Firebase Auth with JWT
 - 🔥 **Primary Database**: Firestore (NoSQL)
+- 🗺️ **API Server**: Node.js with Express
 - 🐘 **Analytics Database**: PostgreSQL 
 - ⚡ **Serverless Functions**: Firebase Cloud Functions
 - 📁 **File Storage**: Firebase Storage
@@ -58,28 +64,28 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 
 ## 🏗️ System Architecture
 
-```
+```yaml
 ┌─────────────────────────────────┐     ┌───────────────────────────────────┐
-│          Frontend              │     │            Backend                │
-│  ┌─────────────────────────┐   │     │   ┌─────────────────────────┐    │
-│  │  Next.js PWA (React 18) │   │     │   │     Firebase Services     │    │
-│  └────────────���────────────┘   │     │   │  ┌────────┐ ┌─────────┐  │    │
-│  ┌─────────────────────────┐   │     │   │  │  Auth  │ │ Storage │  │    │
-│  │  Tailwind + shadcn/ui   │   │     │   │  └────────┘ └─────────┘  │    │
-│  └─────────────────────────┘   │◄───►│   │  ┌────────┐ ┌─────────┐  │    │
-│  ┌─────────────────────────┐   │     │   │  │Firestore│ │ Cloud   │  │    │
-│  │  TypeScript + SWR       │   │     │   │  │         │ │Functions│  │    │
-│  └─────────────────────────┘   │     │   │  └────────┘ └─────────┘  │    │
+│          Frontend               │     │            Backend                │
+│  ┌─────────────────────────┐    │     │   ┌─────────────────────────┐     │
+│  │  Next.js PWA (React 19) │    │     │   │     Firebase Services   │     │
+│  └────────────���─────── ┘    │     │   │  ┌────────┐ ┌─────────┐ │     │
+│  ┌─────────────────────────┐    │     │   │  │  Auth  │ │ Storage │ │     │
+│  │  Tailwind + shadcn/ui   │    │     │   │  └────────┘ └─────────┘ │     │
+│  └─────────────────────────┘    │◄───►│   │  ┌────────┐ ┌─────────┐ │     │
+│  ┌─────────────────────────┐    │     │   │  │Firestore│ │ Cloud   ││     │
+│  │  TypeScript + SWR       │    │     │   │  │         │ │Functions││     │
+│  └─────────────────────────┘    │     │   │  └────────┘ └─────────┘ │     │
 └─────────────────────────────────┘     └───────────────────────────────────┘
         ▲                                                    ▲
         │                                                    │
         ▼                                                    ▼
 ┌─────────────────────────┐               ┌───────────────────────────────────┐
 │     Client Devices      │               │      Development & DevOps         │
-│  ┌─────────┐ ┌───────┐  │               │  ┌──────────┐  ┌─────────────┐   │
-│  │ Desktop │ │Mobile │  │               │  │  Docker  │  │ GitHub      │   │
-│  │ Browser │ │ PWA   │  │               │  │          │  │ Actions     │   │
-│  └─────────┘ └───────┘  │               │  └──────────┘  └─────────────┘   │
+│  ┌─────────┐ ┌───────┐  │               │  ┌──────────┐  ┌─────────────┐    │
+│  │ Desktop │ │Mobile │  │               │  │  Docker  │  │ GitHub      │    │
+│  │ Browser │ │ PWA   │  │               │  │          │  │ Actions     │    │
+│  └─────────┘ └───────┘  │               │  └──────────┘  └─────────────┘    │
 └─────────────────────────┘               └───────────────────────────────────┘
 ```
 
