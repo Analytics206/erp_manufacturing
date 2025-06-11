@@ -111,6 +111,33 @@ Base ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syste
 - Docker Desktop (for local development)
 
 ### Local Development
+## Windows (PowerShell):
+```powershell
+# Remove previous venv if it exists
+Remove-Item -Recurse -Force venv
+# Create new venv
+py -3.11 -m venv venv
+python --version
+# Run the setup script
+# ??
+
+# Activate the virtual environment
+venv\Scripts\Activate.ps1
+```
+
+## Linux/Mac (Terminal):
+```bash
+# Remove previous venv if it exists
+rm -rf venv
+# Create new venv
+python3.11 -m venv venv
+python --version
+# Run the setup script
+# ??
+
+# Activate the virtual environment
+source venv/bin/activate
+```
 
 1. **Clone the repository**
    ```bash
