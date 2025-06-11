@@ -1,9 +1,9 @@
-# 🛠️ Valor ERP - Technical Stack
+# 🛠️ Base ERP - Technical Stack
 | [README.md](README.md) | Return to project details README.md |
   
 ## System Architecture Overview
 
-Valor ERP is built on a modern, cloud-native architecture with the following components:
+Base ERP is built on a modern, cloud-native architecture with the following components:
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
@@ -185,4 +185,4 @@ firebase deploy
 - **Error Tracking**: Automated alerts
 
 ---
-*Last Updated: June 9, 2025*
+*Last Updated: June 10, 2025*

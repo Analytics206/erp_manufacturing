@@ -1,10 +1,10 @@
 # 📘 Business Requirements Document (BRD)
 | [README.md](README.md) | Return to project details README.md |
 
-## Project Name: Valor ERP
+## Project Name: Base ERP
 
 ## 1. Overview
-Valor ERP is a custom ERP SaaS platform tailored for metalworking companies, designed to manage the complete business workflow from estimates to invoicing. The system will be containerized using Docker for consistent local development and deployment.
+Base ERP is a custom ERP SaaS platform tailored for metalworking companies, designed to manage the complete business workflow from estimates to invoicing. The system will be containerized using Docker for consistent local development and deployment.
 
 ## 2. Goals
 - Streamline estimate-to-invoice workflows with automated job tracking and inventory management

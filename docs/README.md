@@ -4,8 +4,8 @@ This directory contains comprehensive documentation for the Valor ERP Manufactur
 
 ## Core Documentation
 
-| Document Name     | Description   |
-|-----------------|---------------|
+| Document Name      | Description   |
+|--------------------|---------------|
 | [1-project_charter.md](./1-project_charter.md) | Key project objectives, scope, stakeholders, and success criteria for the Valor ERP Manufacturing system. |
 | [2-business_requirements.md](./2-business_requirements.md) | Business requirements document (BRD) outlining the business goals, stakeholder needs, success criteria. |
 | [3-product_requirements.md](./3-product_requirements.md) | Product requirements document (PRD) detailing specific product features, acceptance criteria, and prioritization. |

@@ -1,4 +1,4 @@
-# Valor ERP - Modern Manufacturing Management System
+# Base ERP - Modern Manufacturing Management System
 ## Tech Stack
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-15.3.0-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js 15.3.0">
@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </div>
-# Services
+
 <div align="center">
     <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
@@ -16,10 +16,9 @@
 </div>
 
 ## 🌟 Overview
+Base ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) system specifically designed for metalworking companies. This comprehensive solution streamlines business operations from initial estimates to final invoicing, with a strong emphasis on user experience, real-time data synchronization, and AI-assisted development.
 
-Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) system specifically designed for metalworking companies. This comprehensive solution streamlines business operations from initial estimates to final invoicing, with a strong emphasis on user experience, real-time data synchronization, and AI-assisted development.
-
-**Live Demo**: [Valor ERP Demo](https://valor.appsandsides.com/)
+**Live Demo**: [Base ERP Demo](https://base.appsandsides.com/)
 
 ## 🚀 Key Features
 
@@ -93,8 +92,8 @@ Valor ERP is a cutting-edge, cloud-based Enterprise Resource Planning (ERP) syst
 
 | Phase | Description | Duration | Status |
 |-------|-------------|----------|--------|
-| 1 | Foundation & Architecture | 8-12 weeks | ✅ Completed |
-| 2 | Inventory Management | 10-14 weeks | 🔄 In Progress |
+| 1 | Foundation & Architecture | 8-12 weeks | ❌ Not Started |
+| 2 | Inventory Management | 10-14 weeks | ❌ Not Started |
 | 3 | Estimating System | 12-16 weeks | ⏳ Planned |
 | 4 | Job Management | 12-16 weeks | ⏳ Planned |
 | 5 | Time & Attendance | 8-12 weeks | ⏳ Planned |
@@ -184,10 +183,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For inquiries, please contact the Valor ERP team at [contact@valorerp.com](mailto:contact@valorerp.com)
+For inquiries, please contact the Base ERP team at [contact@baseerp.com](mailto:contact@baseerp.com)
 
 ---
 
 <div align="center">
-  Made with ❤️ by Valor ERP Development Team
+  Made with ❤️ by Base ERP Development Team
 </div>

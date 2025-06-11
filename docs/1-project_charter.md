@@ -2,10 +2,10 @@
 | [README.md](README.md) | Return to project details README.md |
 
 ## Project Name
-Valor ERP - Modern Manufacturing Management System
+Base ERP - Modern Manufacturing Management System
 
 ## Project Summary
-Valor ERP is a comprehensive, cloud-based Enterprise Resource Planning (ERP) system specifically designed for metalworking companies. This custom SaaS solution streamlines business operations from initial estimates to final invoicing, with a strong emphasis on user experience, real-time data synchronization, and AI-assisted development. The system will be built using modern web technologies and deployed on scalable cloud infrastructure.
+Base ERP is a comprehensive, cloud-based Enterprise Resource Planning (ERP) system specifically designed for metalworking companies. This custom SaaS solution streamlines business operations from initial estimates to final invoicing, with a strong emphasis on user experience, real-time data synchronization, and AI-assisted development. The system will be built using modern web technologies and deployed on scalable cloud infrastructure.
 
 ## Objectives
 1. **Streamline Operations**: Automate and optimize the estimate-to-invoice workflow

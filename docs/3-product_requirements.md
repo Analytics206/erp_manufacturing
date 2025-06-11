@@ -3,7 +3,7 @@
 
 ## 1.0 Introduction
 ### 1.1 Purpose
-This document outlines the specific product requirements for building the Valor ERP system, providing the necessary details to guide development, align stakeholders, and track progress through delivery.
+This document outlines the specific product requirements for building the Base ERP system, providing the necessary details to guide development, align stakeholders, and track progress through delivery.
 
 ### 1.2 Project Overview
 Valor ERP is a custom ERP solution designed specifically for metalworking companies, streamlining operations from estimates to invoicing with a focus on usability and efficiency.
@@ -211,12 +211,12 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 - **Roadmap**: [ERP Roadmap](/docs/5-roadmap.pdf)
 
 ### 8.4 Contact Information
-- **Product Owner**: Valor ERP Product Team
-  - Email: product@valorerp.com
-  - Basecamp: @valorerp-product
-- **Lead Developer**: Valor ERP Development Team
-  - GitHub: @valor-development
-  - Email: dev@valorerp.com
+- **Product Owner**: Base ERP Product Team
+  - Email: product@baseerp.com
+  - Basecamp: @baseerp-product
+- **Lead Developer**: Base ERP Development Team
+  - GitHub: @base-erp-development
+  - Email: dev@baseerp.com
 - **Client**: Metalworking Company
   - Industry: Metal Fabrication
   - Team: 2 managers, ~10 workers

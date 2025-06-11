@@ -1,8 +1,8 @@
-# Valor ERP Development Notes
+# Base ERP Development Notes
 
 | [README.md](README.md) | Return to project details README.md |
 
-## This document contains developer notes and reminders for ongoing work on the Valor ERP Manufacturing project.
+## This document contains developer notes and reminders for ongoing work on the Base ERP Manufacturing project.
 
 ## To-Do Items
 

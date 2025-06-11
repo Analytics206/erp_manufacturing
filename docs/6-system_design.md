@@ -1,9 +1,9 @@
-# Valor ERP - System Design Document
+# Base ERP - System Design Document
 | [README.md](README.md) | Return to project details README.md |
 
 ## Overview
 
-Valor ERP is a comprehensive Enterprise Resource Planning system specifically designed for metalworking companies, built with a modern tech stack and AI-assisted development practices. This document outlines the system architecture, technical decisions, and implementation details that guide the development and maintenance of the Valor ERP platform.
+Base ERP is a comprehensive Enterprise Resource Planning system specifically designed for metalworking companies, built with a modern tech stack and AI-assisted development practices. This document outlines the system architecture, technical decisions, and implementation details that guide the development and maintenance of the Base ERP platform.
 
 ## Document Purpose
 
