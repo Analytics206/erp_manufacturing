@@ -10,9 +10,10 @@
 - Use Context7 agent to when you need deeper understand of the code or when you need to reason about the code
 
 ## Technology Stack
-- Use Python 3.11 as the primary programming language
+- Use Python 3.11 as the primary programming language for data science and machine learning 
+- Use JavaScript as the primary programming language for web development
 - Use Docker and Docker Compose for containerization and orchestration
-- Use MongoDB for document storage of paper metadata
+- Use MongoDB for document storage
 - Use Neo4j for graph database representation
 - Use Qdrant for vector embeddings storage and semantic search
 - Use PyTorch for deep learning and embedding generation (with GPU support)
