@@ -6,7 +6,7 @@
 This document outlines the specific product requirements for building the Base ERP system, providing the necessary details to guide development, align stakeholders, and track progress through delivery.
 
 ### 1.2 Project Overview
-Valor ERP is a custom ERP solution designed specifically for metalworking companies, streamlining operations from estimates to invoicing with a focus on usability and efficiency.
+Base ERP is a custom ERP solution designed specifically for manufacturing companies, streamlining operations from estimates to invoicing with a focus on usability and efficiency.
 
 ## 2.0 Functional Requirements
 
@@ -16,21 +16,33 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 - **AUTH-03**: System shall enforce session management and timeout policies
 - **AUTH-04**: System shall support multi-factor authentication for sensitive operations
 
-### 2.2 Inventory Management (INV)
+### 2.2 Customer Management (CUS)
+- **CUS-01**: System shall allow creation and management of customer profiles with contact information
+- **CUS-02**: System shall track customer interactions and communication history
+- **CUS-03**: System shall support multiple addresses per customer (shipping, billing)
+- **CUS-04**: System shall maintain customer-specific pricing and discount structures
+- **CUS-05**: System shall track customer credit limits and payment terms
+- **CUS-06**: System shall provide customer activity and purchase history
+- **CUS-07**: System shall support customer categorization and segmentation
+- **CUS-08**: System shall enable document attachments to customer records
+- **CUS-09**: System shall track customer satisfaction and service history
+- **CUS-10**: System shall support batch import/export of customer data
+
+### 2.3 Inventory Management (INV)
 - **INV-01**: System shall allow creation and management of SKUs with custom attributes
 - **INV-02**: System shall support bulk import/export of inventory via CSV/Excel
 - **INV-03**: System shall track inventory levels in real-time across multiple locations
 - **INV-04**: System shall maintain version history for all inventory changes
 - **INV-05**: System shall support barcode/QR code generation and scanning
 
-### 2.3 Estimating System (EST)
+### 2.4 Estimating System (EST)
 - **EST-01**: System shall enable creation of detailed estimates with line items
 - **EST-02**: System shall automatically calculate material and labor costs
 - **EST-03**: System shall support client approval workflows with digital signatures
 - **EST-04**: System shall automatically reserve inventory when estimates are created
 - **EST-05**: System shall track estimate conversion rates and profitability
 
-### 2.4 Job Management (JOB)
+### 2.5 Job Management (JOB)
 - **JOB-01**: System shall provide a visual job board with drag-and-drop functionality
 - **JOB-02**: System shall track job status through configurable workflow stages
 - **JOB-03**: System shall automatically update inventory as jobs progress
@@ -38,19 +50,19 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 - **JOB-05**: System shall provide real-time job costing and profitability tracking
 - **JOB-06**: System shall generate production reports and work orders
 
-### 2.5 Time & Attendance (TIME)
+### 2.6 Time & Attendance (TIME)
 - **TIME-01**: System shall support web and mobile clock in/out functionality
 - **TIME-02**: System shall automatically calculate regular and overtime hours
 - **TIME-03**: System shall integrate with payroll systems via CSV/API
 - **TIME-04**: System shall provide real-time labor cost tracking against jobs
 
-### 2.6 Invoicing & Payments (INV)
+### 2.7 Invoicing & Payments (INV)
 - **INV-01**: System shall generate professional, branded invoices
 - **INV-02**: System shall support multiple payment methods and terms
 - **INV-03**: System shall automatically apply payments and track outstanding balances
 - **INV-04**: System shall send automated payment reminders and receipts
 
-### 2.7 Reporting & Analytics (RPT)
+### 2.8 Reporting & Analytics (RPT)
 - **RPT-01**: System shall provide real-time KPI dashboards
 - **RPT-02**: System shall support custom report generation
 - **RPT-03**: System shall export data to common formats (PDF, Excel, CSV)
@@ -145,7 +157,7 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 | Phase | Description | Duration (Weeks) | Dependencies | Key Deliverables | Status |
 |-------|-------------|-------------------|--------------|------------------|--------|
 | 1 | Foundation & Architecture | 8-12 | - | Core auth, project setup, initial UI kit | ✅ Completed |
-| 2 | Inventory Management | 10-14 | Phase 1 | SKU management, bulk import/export | 🔄 In Progress |
+| 2 | Inventory & Customer Management | 10-14 | Phase 1 | SKU management, customer profiles, bulk import/export | 🔄 In Progress |
 | 3 | Estimating System | 12-16 | Phase 2 | Estimate creation, client approval workflows | ⏳ Planned |
 | 4 | Job Management | 12-16 | Phase 3 | Visual job board, real-time tracking | ⏳ Planned |
 | 5 | Time & Attendance | 8-12 | Phase 4 | Web/mobile time tracking, payroll export | ⏳ Planned |
@@ -205,9 +217,9 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 - **KPI**: Key Performance Indicator
 
 ### 8.3 Demo & References
-- **Live Demo**: [Valor ERP Demo](https://valor.appsandsides.com/)
-- **Repository**: [GitHub Repository](https://github.com/your-organization/valor-erp)
-- **Documentation**: [GitHub Wiki](https://github.com/your-organization/valor-erp/wiki)
+- **Live Demo**: [Base ERP Demo](https://base.appsandsides.com/)
+- **Repository**: [GitHub Repository](https://github.com/your-organization/base-erp)
+- **Documentation**: [GitHub Wiki](https://github.com/your-organization/base-erp/wiki)
 - **Roadmap**: [ERP Roadmap](/docs/5-roadmap.pdf)
 
 ### 8.4 Contact Information
@@ -217,8 +229,8 @@ Valor ERP is a custom ERP solution designed specifically for metalworking compan
 - **Lead Developer**: Base ERP Development Team
   - GitHub: @base-erp-development
   - Email: dev@baseerp.com
-- **Client**: Metalworking Company
-  - Industry: Metal Fabrication
+- **Client**: Manufacturing Company
+  - Industry: Manufacturing
   - Team: 2 managers, ~10 workers
   - Primary Use Case: Estimate creation, job tracking, time & attendance, invoicing
 

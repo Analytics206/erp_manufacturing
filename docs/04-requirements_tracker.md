@@ -4,7 +4,7 @@
 This document tracks the implementation status of all requirements from the Product Requirements Document (PRD) and Business Requirements Document (BRD), ensuring full traceability and project progress transparency.
 
 **Last Updated**: June 10, 2025  
-**Project Phase**: 2 - Inventory Management  
+**Project Phase**: 2 - Inventory & Customer Management  
 **Current Sprint**: Sprint 7 (Weeks 13-14)
 
 ---
@@ -37,6 +37,20 @@ This document tracks the implementation status of all requirements from the Prod
 | AUTH-02 | Role-based access control (Admin, Manager, Technician, Front Desk) | BRD-002 | ❌ | Not started |
 | AUTH-03 | Session management and timeout policies | BRD-002 | ❌ | Not started |
 | AUTH-04 | Multi-factor authentication for sensitive operations | BRD-002 | ❌ | Not started |
+
+### Customer Management
+| PRD ID | Description | Linked BRD ID | Status | Notes |
+|--------|-------------|----------------|--------|-------|
+| CUS-01 | Creation and management of customer profiles | BRD-009 | ❌ | |
+| CUS-02 | Customer interactions and communication history | BRD-009 | ❌ | |
+| CUS-03 | Multiple addresses per customer (shipping, billing) | BRD-009 | ❌ | |
+| CUS-04 | Customer-specific pricing and discount structures | BRD-009 | ❌ | |
+| CUS-05 | Customer credit limits and payment terms | BRD-009 | ❌ | |
+| CUS-06 | Customer activity and purchase history | BRD-009 | ❌ | |
+| CUS-07 | Customer categorization and segmentation | BRD-009 | ❌ | |
+| CUS-08 | Document attachments to customer records | BRD-009 | ❌ | |
+| CUS-09 | Customer satisfaction and service history | BRD-009 | ❌ | |
+| CUS-10 | Batch import/export of customer data | BRD-009 | ❌ | |
 
 ### Inventory Management
 | PRD ID | Description | Linked BRD ID | Status | Notes |
@@ -178,12 +192,21 @@ This document tracks the implementation status of all requirements from the Prod
 - [ ] Setup development containers for inventory module
 - [ ] Configure Firebase Storage buckets for inventory files
 - [ ] Implement PostgreSQL for analytics and data warehousing (BE-06) - 🔧
-- [ ] Implement SKU management (INV-01 to INV-05) - 🔧
-- [ ] Develop bulk import/export functionality (INV-02) - 🔧
-- [ ] Set up real-time inventory tracking (INV-03) - ⏳
-- [ ] Implement version history (INV-04) - ⏳
-- [ ] Set up Firebase Storage for file attachments (BE-04) - 🔧
-- [ ] Integrate caching for inventory data (PERF-04) - ⏳
+- [ ] Implement SKU management (INV-01)
+- [ ] Develop bulk import/export (INV-02)
+- [ ] Set up real-time inventory tracking (INV-03)
+- [ ] Implement version history (INV-04)
+- [ ] Add barcode/QR support (INV-05)
+
+### Phase 2.2 - Customer Management
+- [ ] Create customer profile management (CUS-01)
+- [ ] Implement address management (CUS-03)
+- [ ] Set up customer pricing structures (CUS-04)
+- [ ] Develop credit and payment terms (CUS-05)
+- [ ] Build customer interaction tracking (CUS-02, CUS-06, CUS-09)
+- [ ] Implement customer categorization (CUS-07)
+- [ ] Add document attachment support (CUS-08)
+- [ ] Develop batch import/export (CUS-10)
 
 ### Phase 3: Estimating System (Weeks 27-42)
 - [ ] Develop estimate creation workflow (EST-01 to EST-05)
@@ -251,7 +274,7 @@ This document tracks the implementation status of all requirements from the Prod
 ## Team
 - **Product Owner**: Base ERP Product Team - product@baseerp.com
 - **Lead Developer**: Base ERP Development Team - dev@baseerp.com
-- **Client**: Metalworking Company (2 managers, ~10 users)
+- **Client**: Manufacturing Company (2 managers, ~10 users)
 
 ## Resources
 - [Live Demo](https://baseerp.appsandsides.com/)

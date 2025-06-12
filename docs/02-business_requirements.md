@@ -4,7 +4,7 @@
 ## Project Name: Base ERP
 
 ## 1. Overview
-Base ERP is a custom ERP SaaS platform tailored for metalworking companies, designed to manage the complete business workflow from estimates to invoicing. The system will be containerized using Docker for consistent local development and deployment.
+Base ERP is a custom ERP SaaS platform tailored for manufacturing companies, designed to manage the complete business workflow from estimates to invoicing. The system will be containerized using Docker for consistent local development and deployment.
 
 ## 2. Goals
 - Streamline estimate-to-invoice workflows with automated job tracking and inventory management
@@ -14,7 +14,6 @@ Base ERP is a custom ERP SaaS platform tailored for metalworking companies, desi
 - Maintain high code quality through CI/CD pipelines and automated testing
 
 ## 3. Business Features
-
 | BRD ID | Feature Description | Phase | Linked PRD Requirement(s) |
 |--------|---------------------|-------|---------------------------|
 | BRD-001 | Containerized development environment with Docker and Docker Compose for consistent deployment | 1 | DCK-01 to DCK-03 |
@@ -25,6 +24,7 @@ Base ERP is a custom ERP SaaS platform tailored for metalworking companies, desi
 | BRD-006 | Time and attendance tracking | 5 | TIME-01 to TIME-04 |
 | BRD-007 | Invoicing and payment processing | 6 | INV-01 to INV-03 |
 | BRD-008 | Business intelligence and reporting | 7 | RPT-01 to RPT-04 |
+| BRD-009 | Customer management | 2 | CUS-01 to CUS-04 |
 
 ## 4. Technical Stack
 - **Frontend**: 
@@ -59,7 +59,7 @@ Base ERP is a custom ERP SaaS platform tailored for metalworking companies, desi
 | Phase | Description | Duration (Weeks) | Dependencies |
 |-------|-------------|------------------|--------------|
 | 1 | Architecture & Foundation | 8-12 | - |
-| 2 | Inventory Management | 10-14 | Phase 1 |
+| 2 | Inventory & Customer Management | 10-14 | Phase 1 |
 | 3 | Estimating System | 12-16 | Phase 2 |
 | 4 | Job Management | 12-16 | Phase 3 |
 | 5 | Time & Attendance | 8-12 | Phase 4 |
@@ -103,8 +103,8 @@ Base ERP is a custom ERP SaaS platform tailored for metalworking companies, desi
 
 ## 10. Appendices
 ### 10.1 Reference Materials
-- **Demo UI**: [Valor ERP Demo](https://valor.appsandsides.com/)
-- **Repository**: [GitHub Repository](https://github.com/your-organization/valor-erp)
+- **Demo UI**: [Base ERP Demo](https://base.appsandsides.com/)
+- **Repository**: [GitHub Repository](https://github.com/your-organization/base-erp)
 - **ERP Roadmap**: [ERP Roadmap](/docs/5-roadmap.pdf)
 
 ### 10.2 Technical References
@@ -138,7 +138,7 @@ Base ERP is a custom ERP SaaS platform tailored for metalworking companies, desi
 
 ## 11. Executive Summary
 
-The purpose of the Valor ERP project is to develop a custom ERP SaaS platform tailored for a metalworking company. The system will manage customer estimates, job tracking, inventory control, time & attendance, invoicing, and reporting. It will streamline business operations, enable remote and asynchronous work, and prioritize beautiful, modern UI/UX with a developer-empowered, AI-augmented build process.
+The purpose of the Manufacturing ERP project is to develop a custom ERP SaaS platform tailored for a manufacturing company. The system will manage customer estimates, job tracking, inventory control, time & attendance, invoicing, and reporting. It will streamline business operations, enable remote and asynchronous work, and prioritize beautiful, modern UI/UX with a developer-empowered, AI-augmented build process.
 
 ## 12. Objectives
 - Enable efficient estimate-to-invoice workflows.
@@ -271,7 +271,7 @@ The purpose of the Valor ERP project is to develop a custom ERP SaaS platform ta
 - 18-month timeline allows for thorough testing and refinement
 
 # 20. Appendix
-- **Demo UI**: [Valor ERP Demo](https://valor.appsandsides.com/)
-- **Repository**: [GitHub Repository](https://github.com/your-organization/valor-erp) 
-- **Client Industry**: Metal fabrication
+- **Demo UI**: [Manufacturing ERP Demo](https://manufacturing.appsandsides.com/)
+- **Repository**: [GitHub Repository](https://github.com/your-organization/manufacturing-erp) 
+- **Client Industry**: Manufacturing
 - **Technical Documentation**: See [System Design](/docs/6-system_design.md) and [Schema Documentation](/docs/6-schema)
