@@ -1,4 +1,4 @@
-# NEW PROJECT NAME Development Environment Setup
+# Base ERP Development Environment Setup
 
 ## System Requirements
 
