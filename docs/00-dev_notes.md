@@ -1,6 +1,6 @@
-# NEW PROJECT NAME Development Notes
+# Base ERP Development Notes
 
-## This document contains developer notes and reminders for ongoing work on the NEW PROJECT NAME project.
+## This document contains developer notes and reminders for ongoing work on the Base ERP Manufacturing project.
 
 ## To-Do Items
 
@@ -10,7 +10,7 @@
   - 
 
 ### System monitoring with Prometheus/Grafana
-The NEW PROJECT NAME now includes a comprehensive monitoring solution using Prometheus and Grafana to track system and container metrics.
+The Base ERP now includes a comprehensive monitoring solution using Prometheus and Grafana to track system and container metrics.
 
 #### Overview
 
@@ -31,7 +31,7 @@ This monitoring stack consists of:
 
 2. **Starting the Monitoring Stack**
    ```bash
-   # Start the main NEW PROJECT NAME services
+   # Start the main Base ERP services
    docker-compose up -d
    
    # Start the monitoring stack
@@ -48,7 +48,7 @@ This monitoring stack consists of:
 
 4. **Adding Custom Metrics**
    
-   To expose custom metrics from the NEW PROJECT NAME application:
+   To expose custom metrics from the Base ERP application:
    
 
 5. **Alert Configuration**
